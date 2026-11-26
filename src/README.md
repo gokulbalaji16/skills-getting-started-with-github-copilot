@@ -5,7 +5,7 @@ A super simple FastAPI application that allows students to view and sign up for 
 ## Features
 
 - View all available extracurricular activities
-- Sign up for activities
+- Sign up for activities and remove participants
 
 ## Getting Started
 
@@ -31,7 +31,10 @@ From the repository root:
 
 1. Confirm the activities load on the home page.
 2. Enter a student email, choose an activity, and select **Sign Up**.
-3. Confirm a success message appears. The signup data is held in memory and resets when the server restarts.
+3. Confirm a success message appears and the participant list updates without a refresh.
+4. Use the remove button beside a participant and confirm the list updates.
+
+The signup data is held in memory and resets when the server restarts.
 
 ## API Endpoints
 
@@ -39,6 +42,7 @@ From the repository root:
 | ------ | ----------------------------------------------------------------- | ------------------------------------------------------------------- |
 | GET    | `/activities`                                                     | Get all activities with their details and current participant count |
 | POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Sign up for an activity                                             |
+| DELETE | `/activities/{activity_name}/signup?email=student@mergington.edu` | Unregister from an activity                                         |
 
 ## Data Model
 
