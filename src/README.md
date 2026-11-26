@@ -36,6 +36,14 @@ From the repository root:
 
 The signup data is held in memory and resets when the server restarts.
 
+## Run Backend Tests
+
+From the repository root, run:
+
+```
+python -m pytest
+```
+
 ## API Endpoints
 
 | Method | Endpoint                                                          | Description                                                         |
