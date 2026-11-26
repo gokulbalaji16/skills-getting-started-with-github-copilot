@@ -9,21 +9,29 @@ A super simple FastAPI application that allows students to view and sign up for 
 
 ## Getting Started
 
+From the repository root:
+
 1. Install the dependencies:
 
    ```
-   pip install fastapi uvicorn
+   python -m pip install -r requirements.txt
    ```
 
-2. Run the application:
+2. Start the application:
 
    ```
-   python app.py
+   python -m uvicorn src.app:app --reload
    ```
 
-3. Open your browser and go to:
-   - API documentation: http://localhost:8000/docs
-   - Alternative documentation: http://localhost:8000/redoc
+3. Open the website at http://127.0.0.1:8000. You can also visit:
+   - API documentation: http://127.0.0.1:8000/docs
+   - Alternative documentation: http://127.0.0.1:8000/redoc
+
+## Verify the Website
+
+1. Confirm the activities load on the home page.
+2. Enter a student email, choose an activity, and select **Sign Up**.
+3. Confirm a success message appears. The signup data is held in memory and resets when the server restarts.
 
 ## API Endpoints
 
